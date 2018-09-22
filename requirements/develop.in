@@ -1,0 +1,12 @@
+-r common.in
+
+autopep8
+coverage
+django-extensions
+flake8
+graphviz
+ipython
+model_mommy
+pipdeptree
+pydotplus
+pygraphviz
