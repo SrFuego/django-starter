@@ -20,8 +20,8 @@ class PermissionWhereUniqueInput(graphene.InputObjectType):
 
 
 class PermissionWhereInput(PermissionWhereUniqueInput):
-    AND = graphene.Field('core.schemas.permission.PermissionWhereInput')
-    OR = graphene.Field('core.schemas.permission.PermissionWhereInput')
+    AND = graphene.Field('apps.core.schemas.permission.PermissionWhereInput')
+    OR = graphene.Field('apps.core.schemas.permission.PermissionWhereInput')
     name = graphene.String()
     codename = graphene.String()
 

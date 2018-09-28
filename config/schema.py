@@ -1,6 +1,6 @@
 import graphene
 
-from core.schema import Query as CoreQuery, Mutation as CoreMutation
+from apps.core.schema import Query as CoreQuery, Mutation as CoreMutation
 
 
 class Query(CoreQuery, graphene.ObjectType):
