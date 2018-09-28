@@ -15,11 +15,11 @@ from apps.core.schemas.auth import Mutation as AuthMutation
 
 
 # Create your schemas here.
-class Query(GroupQuery, UserQuery, graphene.ObjectType):
+class Query(Query, UserQuery, graphene.ObjectType):
     pass
 
 
-class Mutation(GroupMutation, AuthMutation, graphene.ObjectType):
+class Mutation(Mutation, AuthMutation, graphene.ObjectType):
     pass
 
 
