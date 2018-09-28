@@ -1,22 +1,24 @@
-# config/urls/common.py
-"""{{ project_name }} URL Configuration
+# Python imports
 
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/2.1/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
+
+# Django imports
 from django.contrib import admin
 from django.urls import path
+from django.views.decorators.csrf import csrf_exempt
+
+
+# Third party apps imports
+from graphene_django.views import GraphQLView
+
+
+# Local imports
+from apps.core.views import GraphQLViewWithStatusCodes
+from apps.core.middleware import TokenAuthenticationMiddleware
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('graphiql/', csrf_exempt(GraphQLView.as_view(graphiql=True))),
+    path('graphql/', csrf_exempt(GraphQLViewWithStatusCodes.as_view(middleware=[TokenAuthenticationMiddleware]))),
+    path('api/', csrf_exempt(GraphQLViewWithStatusCodes.as_view(middleware=[TokenAuthenticationMiddleware]))),
 ]

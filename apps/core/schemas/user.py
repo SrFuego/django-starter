@@ -20,8 +20,8 @@ class UserWhereUniqueInput(graphene.InputObjectType):
 
 
 class UserWhereInput(UserWhereUniqueInput):
-    AND = graphene.Field('core.schemas.user.UserWhereInput')
-    OR = graphene.Field('core.schemas.user.UserWhereInput')
+    AND = graphene.Field('apps.core.schemas.user.UserWhereInput')
+    OR = graphene.Field('apps.core.schemas.user.UserWhereInput')
     email = graphene.String()
 
 
