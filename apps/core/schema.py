@@ -21,3 +21,6 @@ class Query(GroupQuery, UserQuery, graphene.ObjectType):
 
 class Mutation(GroupMutation, AuthMutation, graphene.ObjectType):
     pass
+
+
+schema = graphene.Schema(query=Query, mutation=Mutation)
