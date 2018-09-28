@@ -9,7 +9,7 @@ import graphene
 
 
 # Local imports
-from apps.core.schemas.group import Query as GroupQuery, Mutation as GroupMutation
+from apps.core.schemas.group import Query, Mutation
 from apps.core.schemas.user import Query as UserQuery
 from apps.core.schemas.auth import Mutation as AuthMutation
 
