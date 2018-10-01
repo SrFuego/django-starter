@@ -10,5 +10,6 @@
 
 # Local imports
 from .auth import AuthMutation
-from .group import GroupQuery, GroupMutation
-from .user import UserQuery
+from .group import GroupMutation, GroupQuery, GroupWhereInput
+from .permission import PermissionWhereInput
+from .user import UserQuery, UserWhereInput

@@ -22,8 +22,8 @@ class GroupWhereUniqueInput(graphene.InputObjectType):
 
 
 class GroupWhereInput(GroupWhereUniqueInput):
-    AND = graphene.Field('apps.core.schemas.group.GroupWhereInput')
-    OR = graphene.Field('apps.core.schemas.group.GroupWhereInput')
+    AND = graphene.Field('apps.authentication.schemas.GroupWhereInput')
+    OR = graphene.Field('apps.authentication.schemas.GroupWhereInput')
     name = graphene.String()
 
 
