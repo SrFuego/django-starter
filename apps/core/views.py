@@ -1,7 +1,19 @@
+# apps/core/views.py
+# Python imports
+
+
+# Django imports
+
+
+# Third party apps imports
 from graphene_django.views import GraphQLView
 from graphql.error import GraphQLLocatedError
 
 
+# Local imports
+
+
+# Create your views here.
 class GraphQLViewWithStatusCodes(GraphQLView):
     @staticmethod
     def format_error(error):

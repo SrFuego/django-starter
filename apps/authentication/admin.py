@@ -1,4 +1,4 @@
-# apps/core/admin.py
+# apps/authentication/admin.py
 # Python imports
 
 

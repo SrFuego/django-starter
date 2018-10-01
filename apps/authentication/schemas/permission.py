@@ -11,7 +11,7 @@ from graphene_django.types import DjangoObjectType
 
 
 # Local imports
-from ..utils import model_filter
+from apps.core.utils import model_filter
 
 
 # Create your schemas here.

@@ -11,7 +11,7 @@ from graphene_django.types import DjangoObjectType
 
 
 # Local imports
-from ..utils import model_filter
+from apps.core.utils import model_filter
 
 
 # Create your schemas here.
@@ -30,7 +30,7 @@ class User(DjangoObjectType):
         model = auth_models.User
 
 
-class Query(graphene.ObjectType):
+class UserQuery(graphene.ObjectType):
     users = graphene.List(User, where=UserWhereInput())
     user = graphene.Field(User, where=UserWhereUniqueInput(required=True))
 

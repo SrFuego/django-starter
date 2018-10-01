@@ -1,4 +1,4 @@
-# apps/core/admin.py
+# apps/authentication/tests/test_schemas.py
 # Python imports
 
 
@@ -11,4 +11,4 @@
 # Local imports
 
 
-# Register your models here.
+# Create your schemas tests here.

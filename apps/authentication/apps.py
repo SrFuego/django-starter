@@ -1,4 +1,4 @@
-# apps/core/apps.py
+# apps/authentication/apps.py
 # Python imports
 
 
@@ -13,5 +13,6 @@ from django.apps import AppConfig
 
 
 # Configure your app here.
-class CoreConfig(AppConfig):
-    name = 'core'
+class AuthenticationConfig(AppConfig):
+    name = 'apps.authentication'
+    verbose_name = 'Authentication'
