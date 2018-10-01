@@ -1,8 +1,0 @@
-django < 2.2
-djangorestframework
-graphene-django
-pip-tools
-psycopg2
-psycopg2-binary
-python-dotenv
-unipath
