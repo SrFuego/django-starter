@@ -19,3 +19,7 @@ THIRD_PARTY_APPS_LOCAL = (
 )
 
 INSTALLED_APPS += THIRD_PARTY_APPS_LOCAL
+
+
+# Snapshottest configuration
+TEST_RUNNER = 'snapshottest.django.TestRunner'

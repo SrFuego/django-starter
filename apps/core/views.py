@@ -9,7 +9,6 @@ class GraphQLViewWithStatusCodes(GraphQLView):
 
         if isinstance(error, GraphQLLocatedError):
             original_error = error.original_error
-
             code = getattr(original_error, 'status_code', None)
 
             if code:

@@ -147,5 +147,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 # Graphene configuration
 GRAPHENE = {
-    "SCHEMA": "config.schema.schema"
+    "SCHEMA": "apps.core.schema.schema"
 }
