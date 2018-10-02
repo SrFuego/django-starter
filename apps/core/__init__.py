@@ -1,1 +1,1 @@
-# apps/core/schemas/__init__.py
+# apps/core/__init__.py

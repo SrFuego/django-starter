@@ -1,3 +1,4 @@
+# apps/authentication/schemas/user.py
 # Python imports
 
 

@@ -1,3 +1,4 @@
+# apps/authentication/schemas/permission.py
 # Python imports
 
 

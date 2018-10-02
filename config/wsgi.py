@@ -1,3 +1,4 @@
+# config/wsgi.py
 """
 WSGI config for {{ project_name }} project.
 
