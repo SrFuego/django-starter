@@ -2,7 +2,7 @@
 
 ## Dependencies:
 
-#### Python Version: 3.7.0
+#### Python Version: `3.7.0`
 
 #### Common.in:
 
