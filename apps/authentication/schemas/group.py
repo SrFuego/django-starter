@@ -1,3 +1,4 @@
+# apps/authentication/schemas/group.py
 # Python imports
 
 
@@ -12,8 +13,8 @@ from graphene_django.types import DjangoObjectType
 
 
 # Local imports
+from apps.core.utils import model_filter
 from .permission import PermissionManyInput, connect_group
-from ..utils import model_filter
 
 
 # Create your schemas here.
@@ -22,8 +23,8 @@ class GroupWhereUniqueInput(graphene.InputObjectType):
 
 
 class GroupWhereInput(GroupWhereUniqueInput):
-    AND = graphene.Field('apps.core.schemas.group.GroupWhereInput')
-    OR = graphene.Field('apps.core.schemas.group.GroupWhereInput')
+    AND = graphene.Field('apps.authentication.schemas.GroupWhereInput')
+    OR = graphene.Field('apps.authentication.schemas.GroupWhereInput')
     name = graphene.String()
 
 
@@ -32,7 +33,7 @@ class Group(DjangoObjectType):
         model = auth_models.Group
 
 
-class Query(graphene.ObjectType):
+class GroupQuery(graphene.ObjectType):
     groups = graphene.List(Group, where=GroupWhereInput())
     group = graphene.Field(Group, where=GroupWhereUniqueInput(required=True))
 
@@ -82,7 +83,7 @@ class UpdateGroup(OutputGroup, graphene.Mutation):
 
     @atomic
     def mutate(self, info, data, where):
-        group = Query().resolve_group(info, where)
+        group = GroupQuery().resolve_group(info, where)
 
         if data.get('name'):
             group.name = data.name
@@ -99,12 +100,12 @@ class DeleteGroup(OutputGroup, graphene.Mutation):
         where = GroupWhereUniqueInput(required=True)
 
     def mutate(self, info, where):
-        group = Query().resolve_group(info, where)
+        group = GroupQuery().resolve_group(info, where)
         group.delete()
         return group
 
 
-class Mutation(graphene.ObjectType):
+class GroupMutation(graphene.ObjectType):
     create_group = CreateGroup.Field()
     update_group = UpdateGroup.Field()
     delete_group = DeleteGroup.Field()

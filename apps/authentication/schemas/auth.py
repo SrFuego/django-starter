@@ -1,3 +1,4 @@
+# apps/authentication/schemas/auth.py
 # Python imports
 
 
@@ -12,7 +13,7 @@ from rest_framework.authtoken import models as rest_models
 
 
 # Local imports
-from ..utils import token_exempt
+from apps.core.utils import token_exempt
 
 
 # Create your schemas here.
@@ -56,6 +57,6 @@ class LogoutUser(OutputToken, graphene.Mutation):
         user.auth_token.delete()
 
 
-class Mutation(graphene.ObjectType):
+class AuthMutation(graphene.ObjectType):
     login = LoginUser.Field()
     logout = LogoutUser.Field()

@@ -1,3 +1,4 @@
+# apps/authentication/schemas/user.py
 # Python imports
 
 
@@ -11,7 +12,7 @@ from graphene_django.types import DjangoObjectType
 
 
 # Local imports
-from ..utils import model_filter
+from apps.core.utils import model_filter
 
 
 # Create your schemas here.
@@ -20,8 +21,8 @@ class UserWhereUniqueInput(graphene.InputObjectType):
 
 
 class UserWhereInput(UserWhereUniqueInput):
-    AND = graphene.Field('apps.core.schemas.user.UserWhereInput')
-    OR = graphene.Field('apps.core.schemas.user.UserWhereInput')
+    AND = graphene.Field('apps.authentication.schemas.UserWhereInput')
+    OR = graphene.Field('apps.authentication.schemas.UserWhereInput')
     email = graphene.String()
 
 
@@ -30,7 +31,7 @@ class User(DjangoObjectType):
         model = auth_models.User
 
 
-class Query(graphene.ObjectType):
+class UserQuery(graphene.ObjectType):
     users = graphene.List(User, where=UserWhereInput())
     user = graphene.Field(User, where=UserWhereUniqueInput(required=True))
 

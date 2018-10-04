@@ -44,6 +44,7 @@ THIRD_PARTY_APPS = (
 
 LOCAL_APPS = (
     'apps.core',
+    'apps.authentication',
 )
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -147,5 +148,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 # Graphene configuration
 GRAPHENE = {
-    "SCHEMA": "apps.core.schema.schema"
+    "SCHEMA": "apps.core.schemas.schema"
 }

@@ -1,3 +1,4 @@
+# config/urls/common.py
 # Python imports
 
 
@@ -13,12 +14,14 @@ from graphene_django.views import GraphQLView
 
 # Local imports
 from apps.core.views import GraphQLViewWithStatusCodes
-from apps.core.middleware import TokenAuthenticationMiddleware
+from apps.authentication.middlewares import TokenAuthenticationMiddleware
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('graphiql/', csrf_exempt(GraphQLView.as_view(graphiql=True))),
-    path('graphql/', csrf_exempt(GraphQLViewWithStatusCodes.as_view(middleware=[TokenAuthenticationMiddleware]))),
-    path('api/', csrf_exempt(GraphQLViewWithStatusCodes.as_view(middleware=[TokenAuthenticationMiddleware]))),
+    path('graphql/', csrf_exempt(GraphQLViewWithStatusCodes.as_view(
+        middleware=[TokenAuthenticationMiddleware]))),
+    path('api/', csrf_exempt(GraphQLViewWithStatusCodes.as_view(
+        middleware=[TokenAuthenticationMiddleware]))),
 ]

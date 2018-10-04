@@ -1,3 +1,17 @@
+# apps/core/utils.py
+# Python imports
+
+
+# Django imports
+
+
+# Third party apps imports
+
+
+# Local imports
+
+
+# Create your utils here.
 def model_filter(queryset, where):
     if where is None:
         return queryset
@@ -5,8 +19,8 @@ def model_filter(queryset, where):
     if where.get('AND'):
         queryset = model_filter(queryset, where.get('AND'))
 
-    filters = {k: v for k, v in where.items() if (v is not None) and (k not in ['AND', 'OR'])}
-
+    filters = {k: v for k, v in where.items() if (
+        v is not None) and (k not in ['AND', 'OR'])}
     result = queryset.filter(**filters)
 
     if where.get('OR'):
