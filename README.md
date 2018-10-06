@@ -12,8 +12,8 @@
 
 ## Branch usage:
 
-- For startproject `django-admin startproject --template=https://github.com/SrFuego/django-starter/archive/graphql.zip PROJECT_NAME`
-- For startproject `django-admin startapp --template=https://github.com/SrFuego/django-starter/archive/graphql-app.zip APP_NAME`
+- For startproject `django-admin startproject --template=https://github.com/inspired-solutions/django-starter/archive/graphql.zip PROJECT_NAME`
+- For startproject `django-admin startapp --template=https://github.com/inspired-solutions/django-starter/archive/graphql-app.zip APP_NAME`
 
 ## Dependencies:
 
