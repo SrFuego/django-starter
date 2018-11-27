@@ -18,7 +18,7 @@
 
 ## Branch usage:
 
-- For startproject `django-admin startproject --template=https://github.com/SrFuego/django-starter/archive/PROJECT_BRANCH.zip PROJECT_NAME`
+- For startproject `django-admin startproject --extension=py,md,env --template=https://github.com/SrFuego/django-starter/archive/PROJECT_BRANCH.zip PROJECT_NAME`
 - For startapp `django-admin startapp --template=https://github.com/SrFuego/django-starter/archive/APP_BRANCH.zip APP_NAME`
 
 ## Dependencies:
@@ -40,13 +40,13 @@
 
 - `virtualenv venv -p /path/to/python` # Create virtualenv
 - `source venv/bin/activate` # Activate virtualenv
-- `pip install django` # Install Django
-- `django-admin startproject --template=https://github.com/SrFuego/django-starter/archive/PROJECT_TYPE.zip PROJECT_NAME` # Create project from template
+- `pip install django`
+- `django-admin startproject --extension=py,md,env --template=https://github.com/SrFuego/django-starter/archive/PROJECT_BRANCH.zip PROJECT_NAME` # Create project from template
 - `cd PROJECT_NAME`
-- `pip install pip-tools` # Install pip-tools
-- `pip-compile -r requirements/develop.in -o requirements-DATE.develop` #
-- `pip-sync requirements-DATE.develop` #
-- Open `.env` and edit
+- `pip install pip-tools`
+- `pip-compile -r requirements/develop.in -o requirements-DATE.develop` # Generates a requirements file with the latest version of the dependencies up to the current date
+- `pip-sync requirements-DATE.develop` # Synchronize the dependencies and versions of your virtual environment with those of the generated file
+- Open `.env` and populate variables
 - `python manage.py runserver`
 
 ## Run coverage and generate html coverage code report
