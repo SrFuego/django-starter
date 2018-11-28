@@ -15,4 +15,4 @@ from django.apps import AppConfig
 # Configure your app here.
 class CoreConfig(AppConfig):
     name = 'apps.core'
-    verbose_name = 'Faqture App'
+    verbose_name = '{{ project_name }}'
