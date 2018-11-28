@@ -18,7 +18,7 @@
 ## Development
 
 - `git clone REPOSITORY_LINK` # Clone the repository
-- `cd PROJECT_NAME`
+- `cd {{ project_name }}`
 - `virtualenv venv -p /path/to/python` # Create virtualenv
 - `. venv/Scripts/activate` # Activate virtualenv
 - `pip install pip-tools`
