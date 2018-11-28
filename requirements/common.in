@@ -1,6 +1,14 @@
+coreapi
 django < 2.2
+django-cors-headers
+django-crispy-forms
+django-filter
+django-model-utils
+djangorestframework
+markdown
 pip-tools
 psycopg2
 psycopg2-binary
+pygments
 python-dotenv
 unipath

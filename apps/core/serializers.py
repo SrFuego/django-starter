@@ -1,4 +1,4 @@
-# apps/core/views.py
+# apps/core/serializers.py
 # Python imports
 
 
@@ -11,4 +11,4 @@
 # Local imports
 
 
-# Create your views here.
+# Create your serializers here.
