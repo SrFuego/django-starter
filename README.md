@@ -25,6 +25,7 @@
 - `pip-compile -r requirements/develop.in -o requirements-DATE.develop` # Generates a requirements file with the latest version of the dependencies up to the current date
 - `pip-sync requirements-DATE.develop` # Synchronize the dependencies and versions of your virtual environment with those of the generated file
 - Open `.env` and populate variables
+- Set `ENVIRONMENT_MODULE` in `.env` file, alternatives are: `develop`, `testing`, `staging` and `production`.
 - `python manage.py runserver`
 
 ## Run tests and generate html coverage code report
