@@ -12,12 +12,12 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-THIRD_PARTY_APPS_LOCAL = (
+THIRD_PARTY_APPS_TESTING = (
     'django_extensions',
     'speedinfo',
 )
 
-INSTALLED_APPS += THIRD_PARTY_APPS_LOCAL
+INSTALLED_APPS += THIRD_PARTY_APPS_TESTING
 
 # Django Rest Framework CORS configuration
 CORS_ORIGIN_ALLOW_ALL = True
