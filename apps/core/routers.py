@@ -17,7 +17,6 @@ from rest_framework.routers import DefaultRouter
 # routers_tuples = (app_django_router,)
 routers_tuples = ()
 routers_lists = sum(
-    # [list(router_tuple) for router_tuple in routers_tuples], [])
     [list(router_tuple) for router_tuple in routers_tuples], [])
 
 router = DefaultRouter()
