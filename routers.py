@@ -12,6 +12,6 @@
 
 
 # Create your routers here.
-# router_list = (
+{{ app_name }} = (
 #     (r'model', ModelViewSet),
-# )
+)
