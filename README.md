@@ -1,5 +1,5 @@
 
-# {{ project_name }}
+# {{ project_name | title }}
 
 ## Dependencies:
 
