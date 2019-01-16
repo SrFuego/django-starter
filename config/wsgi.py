@@ -1,6 +1,6 @@
 # config/wsgi.py
 """
-WSGI config for {{ project_name }} project.
+WSGI config for {{ project_name | title }} project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
