@@ -32,5 +32,5 @@ urlpatterns = [
     path(
         r'docs/',
         include_docs_urls(title=API_TITLE, description=API_DESCRIPTION)),
-    path(r'api/v1/', include(router.urls)),
+    path(r'api/v1/', include((router.urls, 'api_v1'), namespace='api_v1'))
 ]
