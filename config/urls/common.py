@@ -21,7 +21,7 @@ from rest_framework.documentation import include_docs_urls
 
 from apps.core.routers import router
 
-API_TITLE = '{{ project_name }}'
+API_TITLE = '{{ project_name | title }}'
 API_DESCRIPTION = '...'
 
 urlpatterns = [
