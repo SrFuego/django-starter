@@ -20,6 +20,7 @@ CORS_ORIGIN_ALLOW_ALL = True
 # Application definition
 
 THIRD_PARTY_APPS_DEVELOP = (
+    'django_extensions',
 )
 
 INSTALLED_APPS += THIRD_PARTY_APPS_DEVELOP
