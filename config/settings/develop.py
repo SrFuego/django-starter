@@ -30,4 +30,14 @@ INSTALLED_APPS += THIRD_PARTY_APPS_DEVELOP
 GRAPH_MODELS = {
     'all_applications': True,
     'group_models': True,
+    'output': 'database.png',
+    'exclude_models': ','.join([
+        'AbstractBaseSession',
+        'AbstractUser',
+        'ContentType',
+        'Group',
+        'LogEntry',
+        'Permission',
+        'Session',
+    ])
 }
