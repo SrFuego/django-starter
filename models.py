@@ -3,7 +3,7 @@
 
 
 # Django imports
-
+from django.db import models
 
 # Third party apps imports
 
