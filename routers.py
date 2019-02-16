@@ -9,10 +9,10 @@
 
 
 # Local imports
-from .viewsets import {{ app_name | capfirst cut:" " }}ViewSet
+from .viewsets import {{ app_name | capfirst }}ViewSet
 
 
 # Create your routers here.
 {{ app_name }} = (
-    (r'{{ app_name | capfirst cut:" " }}', {{ app_name | capfirst cut:" " }}ViewSet),
+    (r'{{ app_name | capfirst }}', {{ app_name | capfirst }}ViewSet),
 )

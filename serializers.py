@@ -10,12 +10,12 @@ from rest_framework.serializers import ModelSerializer
 
 
 # Local imports
-from .models import {{ app_name | capfirst cut:" " }}
+from .models import {{ app_name | capfirst }}
 
 
 # Create your serializers here.
-class {{ app_name | capfirst cut:" " }}Serializer(ModelSerializer):
+class {{ app_name | capfirst }}Serializer(ModelSerializer):
 
     class Meta:
-        model = {{ app_name | capfirst cut:" " }}
+        model = {{ app_name | capfirst }}
         fields = '__all__'

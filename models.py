@@ -12,7 +12,7 @@
 
 
 # Create your models here.
-class {{ app_name | capfirst cut:" " }}(models.Model):
+class {{ app_name | capfirst }}(models.Model):
     pass
 
     def __str__(self):

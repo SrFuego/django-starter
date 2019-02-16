@@ -13,6 +13,6 @@ from django.apps import AppConfig
 
 
 # Configure your app here.
-class {{ app_name | capfirst cut:" " }}Config(AppConfig):
+class {{ app_name | capfirst }}Config(AppConfig):
     name = 'apps.{{ app_name }}'
-    verbose_name = '{{ app_name | capfirst cut:" " }}'
+    verbose_name = '{{ app_name | capfirst }}'
