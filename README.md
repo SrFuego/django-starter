@@ -18,7 +18,7 @@
 
 ## Branch usage:
 
-- For startproject `django-admin startproject --extension=py,md,env --template=https://github.com/SrFuego/django-starter/archive/PROJECT_BRANCH.zip PROJECT_NAME`
+- For startproject `django-admin startproject --extension=py,md,example --template=https://github.com/SrFuego/django-starter/archive/PROJECT_BRANCH.zip PROJECT_NAME`
 - For startapp `django-admin startapp --template=https://github.com/SrFuego/django-starter/archive/APP_BRANCH.zip APP_NAME`
 
 ## Dependencies:
