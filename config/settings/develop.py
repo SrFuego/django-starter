@@ -5,7 +5,7 @@ from .common import *
 
 
 # Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
+# See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -19,3 +19,21 @@ THIRD_PARTY_APPS_DEVELOP = (
 )
 
 INSTALLED_APPS += THIRD_PARTY_APPS_DEVELOP
+
+
+# Graph models conf
+GRAPH_MODELS = {
+    'all_applications': True,
+    'group_models': True,
+    'output': 'database.png',
+    'exclude_models': ','.join([
+        'AbstractBaseSession',
+        'AbstractUser',
+        'ContentType',
+        'Group',
+        'LogEntry',
+        'Permission',
+        'Session',
+        'Token',
+    ])
+}
