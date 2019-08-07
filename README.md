@@ -1,4 +1,4 @@
-# Django starter template for Django 2.1 with Python 3.7.0
+# Django starter template for Django 2.2 LTS with Python 3.7.4
 
 ## Explanation of the branches:
 
@@ -38,16 +38,16 @@
 
 ## Development
 
-- `virtualenv venv -p /path/to/python` # Create virtualenv
-- `source venv/bin/activate` # Activate virtualenv
-- `pip install django`
-- `django-admin startproject --extension=py,md,env --template=https://github.com/SrFuego/django-starter/archive/PROJECT_BRANCH.zip PROJECT_NAME` # Create project from template
+- Create your virtualenv
+- Activate your virtualenv
+- Install Django: `pip install django`
+- Create project from template: `django-admin startproject --extension=py,md,example --template=https://github.com/SrFuego/django-starter/archive/PROJECT_BRANCH.zip PROJECT_NAME`
 - `cd PROJECT_NAME`
-- `pip install pip-tools`
-- `pip-compile -r requirements/develop.in -o requirements-DATE.develop` # Generates a requirements file with the latest version of the dependencies up to the current date
-- `pip-sync requirements-DATE.develop` # Synchronize the dependencies and versions of your virtual environment with those of the generated file
-- Open `.env` and populate variables
-- `python manage.py runserver`
+- Install pip-tools: `pip install pip-tools`
+- Compile develop dependencies: `pip-compile -r requirements/develop.in -o requirements-DATE.develop`
+- Synchronize the packages of your virtual environment with project dependencies: `pip-sync requirements-DATE.develop`
+- Create a `.env` file from `.env.example` file and populate variables in `.env`
+
 
 ## Run coverage and generate html coverage code report
 
