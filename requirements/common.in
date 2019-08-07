@@ -5,7 +5,7 @@ django-crispy-forms
 django-filter
 django-model-utils
 django-rest-auth
-djangorestframework
+djangorestframework < 3.11
 markdown
 pip-tools
 psycopg2
